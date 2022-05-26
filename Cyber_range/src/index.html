@@ -1,0 +1,166 @@
+<!--
+ =========================================================
+ * Black Dashboard Angular - v1.0.0
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/black-dashboard-angular
+ * Copyright 2019 Creative Tim (https://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/img/logo_2.png"
+    />
+    <link rel="icon" type="image/png" href="./assets/img/logo_2.png" />
+    <title>CRC CYBER RANGE</title>
+    <!--     Fonts and icons     -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800"
+      rel="stylesheet"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
+      rel="stylesheet"
+    />
+
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" rel="stylesheet"  />
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js "/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"  />
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js "/>
+
+   --> <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css "/>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw4COV_1tp4myhi1obUfV81GPbzq8uhao"></script>
+
+
+    <script>
+      $(function()
+      {
+        function after_form_submitted(data)
+        {
+          if(data.result == 'success')
+          {
+            $('form#reused_form').hide();
+            $('#success_message').show();
+            $('#error_message').hide();
+          }
+          else
+          {
+            $('#error_message').append('<ul></ul>');
+
+            jQuery.each(data.errors,function(key,val)
+            {
+              $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+            });
+            $('#success_message').hide();
+            $('#error_message').show();
+
+            //reverse the response on the button
+            $('button[type="button"]', $form).each(function()
+            {
+              $btn = $(this);
+              label = $btn.prop('orig_label');
+              if(label)
+              {
+                $btn.prop('type','submit' );
+                $btn.text(label);
+                $btn.prop('orig_label','');
+              }
+            });
+
+          }//else
+        }
+
+        $('#reused_form').submit(function(e)
+        {
+          e.preventDefault();
+
+          $form = $(this);
+          //show some response on the button
+          $('button[type="submit"]', $form).each(function()
+          {
+            $btn = $(this);
+            $btn.prop('type','button' );
+            $btn.prop('orig_label',$btn.text());
+            $btn.text('Sending ...');
+          });
+
+
+          $.ajax({
+            type: "POST",
+            url: 'handler.php',
+            data: $form.serialize(),
+            success: after_form_submitted,
+            dataType: 'json'
+          });
+
+        });
+      });
+    </script>
+    <!-- you need to include the shieldui css and js assets in order for the charts to work -->
+    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+
+    <script></script>
+
+    <script type="text/javascript">
+      initializeRatings();
+
+      function initializeRatings() {
+        $('#rate1').shieldRating({
+          max: 7,
+          step: 0.1,
+          value: 6.3,
+          markPreset: false
+        });
+        $('#rate2').shieldRating({
+          max: 7,
+          step: 0.1,
+          value: 6,
+          markPreset: false
+        });
+        $('#rate3').shieldRating({
+          max: 7,
+          step: 0.1,
+          value: 4.5,
+          markPreset: false
+        });
+        $('#rate4').shieldRating({
+          max: 7,
+          step: 0.1,
+          value: 5,
+          markPreset: false
+        });
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+
+  </head>
+
+  <body>
+    <app-root></app-root>
+
+  </body>
+</html>

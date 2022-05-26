@@ -1,0 +1,660 @@
+
+<div class=" content">
+  <div class=" row">
+    <div class=" col-md-12">
+      <div class=" card">
+        <div class=" card-header">
+          <h4 class=" card-title">VULNERABLE MACHINES </h4>
+        </div>
+        <table class="table">
+          <thead>
+          <tr>
+            <th class="text-center ">#</th>
+            <th>MACHINE NAME</th>
+            <th>MACHINE TYPE</th>
+            <th>LAUNCH DATE</th>
+            <th>EXPIRY DATE</th>
+            <th>Actions</th>
+          </tr>
+
+          </thead>
+          <!-- <ul>
+            <li *ngFor="let g of variable"> (1)
+              {{ g.MachineName }}
+            </li>
+           </ul> -->
+
+
+          <tbody>
+ <!--*************************************Mutilidae Macine***********************************************************-->
+          
+ 
+          <tr *ngFor="let g of variable">
+            <td class="text-center">{{g.MachineNumber}}</td>
+            <td>{{g.MachineName}} </td>
+            <td>{{g.MachineType}}</td>
+            <td>{{g.MachineLaunchDate}}</td>
+            <td>{{g.MachineExpiryDate}}</td>
+            <td>
+                <i class="tim-icons icon-laptop" (click)="open(mut_mdl)"style="cursor: pointer; color: #1d8cf8" rel="tooltip" title="View Machine Details"></i>&nbsp;&nbsp;
+                <i class="fa fa-edit" (click)="open(mutil_cntct)"  style="cursor: pointer; color: #00f2c3" rel="tooltip" title="Write Review"></i>&nbsp;&nbsp;
+            <button type="button" class="btn btn-danger btn-sm" id="btn1"  (click)="changeBtn('btn1', 'Mutil')">Off</button>
+          <!--               <a href="{{this.mut}}">URL</a>-->
+              &nbsp;&nbsp;&nbsp;
+                                        &nbsp;
+              <label>{{this.mut}}</label>
+            </td>
+          </tr>
+ 
+ 
+ 
+          <tr>
+            <td class="text-center">1</td>
+            <td>MUTILLIDAE_2 </td>
+            <td>WEB APP</td>
+            <td>1st JANUARY 2019</td>
+            <td> 1st  MARCH 2019</td>
+            <td>
+                <i class="tim-icons icon-laptop" (click)="open(mut_mdl)"style="cursor: pointer; color: #1d8cf8" rel="tooltip" title="View Machine Details"></i>&nbsp;&nbsp;
+                <i class="fa fa-edit" (click)="open(mutil_cntct)"  style="cursor: pointer; color: #00f2c3" rel="tooltip" title="Write Review"></i>&nbsp;&nbsp;
+             <button type="button" class="btn btn-danger btn-sm" id="btn1"  (click)="changeBtn('btn1', 'Mutil')">Off</button>
+<!--               <a href="{{this.mut}}">URL</a>-->
+              &nbsp;&nbsp;&nbsp;
+                                        &nbsp;
+              <label>{{this.mut}}</label>
+            </td>
+          </tr>
+<!--****************************************DVWA Machine*****************************************************************-->
+          <tr>
+            <td class="text-center">2</td>
+            <td>DVWA</td>
+            <td>WEB APP</td>
+            <td>1st January 2019</td>
+            <td>20th MARCH 219</td>
+
+            <td>
+               <i class="tim-icons icon-laptop" (click)="open(dvwa_modl)" style="cursor: pointer; color: #1d8cf8" rel="tooltip" title="View Machine Details"></i>&nbsp;&nbsp;
+              <i class="fa fa-edit" (click)="open(dvwa_cntct)" style="cursor: pointer; color: #00f2c3" rel="tooltip" title="Write Review"></i>&nbsp;&nbsp;
+              <button type="button" class="btn btn-danger btn-sm" id="btn2"  (click)="changeBtn('btn2', 'DVWA')">Off</button>
+              &nbsp;&nbsp;
+              <a href="{{this.avail}}"></a>
+              <label>{{this.avail}}</label>
+            </td>
+ </tr>
+ <!--*******************************************BWAP MACHINE***********************************************************************-->
+ <tr>
+            <td class="text-center">3</td>
+            <td>BWAPP2</td>
+            <td>WEB APP</td>
+            <td>1st January 2019</td>
+            <td>1st January 2021</td>
+            <td>
+                <i class="tim-icons icon-laptop"  (click)="open(bwp_mdl)" style="cursor: pointer; color: #1d8cf8" rel="tooltip" title="View Machine Details"></i>&nbsp;&nbsp;
+              <i class="fa fa-edit" (click)="open(bwapp_cntct)" style="cursor: pointer; color: #00f2c3" rel="tooltip" title="Write Review"></i>&nbsp;&nbsp;
+              <button type="button"  class="btn btn-danger btn-sm" id="btn3" (click)="changeBtn('btn3', 'BWAPP')">Off</button>
+              &nbsp;&nbsp;
+<!--              <a href="{{this.bwwapp}}">URL</a>-->
+              <label>{{this.bwwapp}}</label>
+            </td>
+
+
+ </tr>
+ <!--******************************************Juice Shop************************************************************************-->
+ <tr>
+            <td class="text-center">4</td>
+            <td>JUICE SHOP</td>
+            <td>WEB APP</td>
+            <td>1st January 2019</td>
+            <td>1st January 2021</td>
+            <td>
+              <i class="tim-icons icon-laptop" (click)="open(juc_shop)" style="cursor: pointer; color: #1d8cf8" rel="tooltip" title="View Machine Details"></i>&nbsp;&nbsp;
+                <i class="fa fa-edit" (click)="open(juice_cntct)" style="cursor: pointer; color: #00f2c3" rel="tooltip" title="Write Review"></i>&nbsp;&nbsp;
+              <button type="button"  class="btn btn-danger btn-sm" id="btn4" (click)="changeBtn('btn4', 'JUICE_SHOP')">Off</button>
+              &nbsp;&nbsp;
+<!--              <a href="{{this.Juice_shop}}">URL</a>-->
+              <label>{{this.Juice_shop}}</label>
+            </td>
+
+ </tr>
+
+ <!--***************************************************Gruyere***********************************************************-->
+
+          <tr>
+            <td class="text-center">5</td>
+            <td>GRUYERE</td>
+            <td>WEB APP</td>
+            <td>1st January 2019</td>
+            <td>1st January 2021</td>
+            <td>
+               <i class="tim-icons icon-laptop" (click)="open(gru_mdl)" style="cursor: pointer; color: #1d8cf8" rel="tooltip" title="View Machine Details"></i>&nbsp;&nbsp;
+               <i class="fa fa-edit" (click)="open(grue_cntct)"style="cursor: pointer; color: #00f2c3" rel="tooltip" title="Write Review"></i>&nbsp;&nbsp;
+              <button type="button"  class="btn btn-danger btn-sm" id="btn5" (click)="changeBtn('btn5', 'gruyere')">Off</button>
+              &nbsp;&nbsp;
+<!--              <a href="{{this.gruyere}}">URL</a>-->
+              <label>{{this.gruyere}}</label>
+            </td>
+          </tr>
+ <!--***************************************************bADSTORE-dOCKER***********************************************************-->
+          <tr>
+            <td class="text-center">6</td>
+            <td>BADSTOR-DOCKER</td>
+            <td>WEB APP</td>
+            <td>1st January 2019</td>
+            <td>1st January 2021</td>
+            <td>
+               <i class="tim-icons icon-laptop" (click)="open(badstore_mdl)" style="cursor: pointer; color: #1d8cf8" rel="tooltip" title="View Machine Details"></i>&nbsp;&nbsp;
+                <i class="fa fa-edit" (click)="open(badstore_cntct)" style="cursor: pointer; color: #00f2c3" rel="tooltip" title="Write Review"></i>&nbsp;&nbsp;
+              <button type="button"  class="btn btn-danger btn-sm" id="btn6" (click)="changeBtn('btn6', 'badstore')">Off</button>
+              &nbsp;&nbsp;
+<!--              <a href="{{this.badstoree}}">URL</a>-->
+              <label>{{this.badstoree}}</label>
+            </td>
+          </tr>
+ <!--***************************************************hackazone***********************************************************-->
+
+ <!------- ---->
+          <tr>
+            <td class="text-center">7</td>
+            <td>HACKAZONE</td>
+            <td>WEB APP</td>
+            <td>1st January 2019</td>
+            <td>1st January 2021</td>
+            <td>
+             <i class="tim-icons icon-laptop" (click)="open(hk_mdl)"style="cursor: pointer; color: #1d8cf8" rel="tooltip" title="View Machine Details"></i>&nbsp;&nbsp;
+              <i class="fa fa-edit" (click)="open(hackazone_cntct)" style="cursor: pointer; color: #00f2c3" rel="tooltip" title="Write Review"></i>&nbsp;&nbsp;
+              <button type="button"  class="btn btn-danger btn-sm" id="btn7" (click)="changeBtn('btn7', 'hackazone')">Off</button>
+              &nbsp;&nbsp;
+<!--              <label>{{this.hackney}}</label>-->
+              <label>{{this.hackney}}</label>
+
+
+            </td>
+          </tr>
+ <!--*************************************************************************************************************-->
+
+ <!-------xvwa ---->
+          <tr>
+            <td class="text-center">8</td>
+            <td>XVWA</td>
+            <td>WEB APP</td>
+            <td>1st January 2019</td>
+            <td>1st January 2021</td>
+            <td>
+              <i class="tim-icons icon-laptop" (click)="open(xvwa_mdl)" style="cursor: pointer; color: #1d8cf8" rel="tooltip" title="View Machine Details"></i>&nbsp;&nbsp;
+              <i class="fa fa-edit" (click)="open(xvwa_cntct)" style="cursor: pointer; color: #00f2c3" rel="tooltip" title="Write Review"></i>&nbsp;&nbsp;
+               <button type="button" class="btn btn-danger btn-sm" id="btn8" (click)="changeBtn('btn8')">Off</button>
+
+
+            </td>
+          </tr>
+          <!------WACKOPICKO ---->
+          <tr>
+            <td class="text-center">9</td>
+            <td>WACKOPICKO</td>
+            <td>WEB APP</td>
+            <td>1st January 2019</td>
+            <td>1st January 2021</td>
+            <td>
+               <i class="tim-icons icon-laptop"  (click)="open(wacko_mdl)" style="cursor: pointer; color: #1d8cf8" rel="tooltip" title="View Machine Details"></i>&nbsp;&nbsp;
+               <i class="fa fa-edit " (click)="open(wacko_cntct)" rel="tooltip" title="WRITE REVIEW" style="cursor: pointer; color: #00f2c3" rel="tooltip" title="Write Review"></i>&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger btn-sm"  id="btn9" (click)="changeBtn('btn9')">Off</button>
+
+
+            </td>
+          </tr>
+          <!------OWASPBRICKS ---->
+          <tr>
+            <td class="text-center">10</td>
+            <td>OWASPBRICKS</td>
+            <td>WEB APP</td>
+            <td>1st January 2019
+            </td>
+            <td>1st January 2021</td>
+            <td>
+                <i class="tim-icons icon-laptop" (click)="open(content)"  style="cursor: pointer; color: #1d8cf8" rel="tooltip" title="View Machine Details"></i>&nbsp;&nbsp;
+
+              <i class="fa fa-edit" (click)="open(last_cntct)" style="cursor: pointer; color: #00f2c3" rel="tooltip" title="Write Review"></i>&nbsp;&nbsp;
+               <button type="button"class="btn btn-danger btn-sm" id="btn10" (click)="changeBtn('btn10')">Off</button>
+
+
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!--**********************************************************************************************-->
+
+<!----- Mutillidae_2 Modal --->
+<ng-template #mut_mdl let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="mutilidae-mdl">MUTILLIDAE_2 WEB APP VULNERABLE MACHINE</h4>
+
+
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p align="justify"> Mutillidae II is a free, open source, deliberately vulnerable
+      web-application providing a target for web-security enthusiest. Mutillidae has been used
+      in graduate security courses, corporate web sec training courses,
+      and as an "assess the assessor" target for vulnerability assessment software.</p>
+  </div>
+
+  <!--<div class="form-group" align="center">
+    <label for="exampleInputPassword1">IP ADDRESS AND PORT NUMBER</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" style="width:300px">
+  </div>-->
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')" style="width: 500px">OK</button>
+  </div>
+</ng-template>
+<ng-template #mutil_cntct let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="mutil-rat">RATE THIS MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <p> Please Give rating to This Machine regarding your Personal Experience </p>
+    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+    <hr>
+    <pre>Rate: <b>{{currentRate}}</b></pre>
+  </div>
+
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">SUBMIT</button>
+  </div>
+</ng-template>
+<!-- Mutillidae_2 modal Ends --->
+<!--**********************************************************************************************-->
+
+<!--DVWA modal -->
+<ng-template #dvwa_modl let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="dvwa-modell">DVWA</h4>
+
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p align="justify">Damn Vulnerable Web App (DVWA) is a PHP/MySQL web
+      application that is damn vulnerable.
+      Its main goals are to be an aid for security professionals to test their skills and tools in a legal environment,
+      help web developers better understand the processes of securing web applications
+      and aid teachers/students to teach/learn web application security in a class room environment.</p>
+  </div>
+
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')"style="width: 500px">OK</button>
+  </div>
+</ng-template>
+<ng-template #dvwa_cntct let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="dvwa-rat">RATE THIS MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <p> Please Give rating to This Machine regarding your Personal Experience </p>
+    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+    <hr>
+    <pre>Rate: <b>{{currentRate}}</b></pre>
+  </div>
+
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">SUBMIT</button>
+  </div>
+</ng-template>
+
+<!--**********************************************************************************************-->
+
+<!---- BWAPP modal starts --->
+<ng-template #bwp_mdl let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="bwapp-modell">BWAPP</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>bWAPP, or a buggy web application, is a free and open source deliberately insecure web application.
+
+      bWAPP helps security enthusiasts, developers and students to discover and to prevent web vulnerabilities.
+      bWAPP prepares one to conduct successful penetration testing and ethical hacking projects. What makes bWAPP
+      so unique? Well, it has over 100 web bugs! It covers all major known web vulnerabilities, including all risks
+      from the OWASP Top 10 project. The focus is not just on one specific issue... bWAPP is covering a wide range of
+      vulnerabilities!
+
+      bWAPP is a PHP application that uses a MySQL database. It can be hosted on Linux/Windows with Apache/IIS and MySQL.
+      It is supported on WAMP or XAMPP. Another possibility is to download bee-box, a custom VM pre-installed with bWAPP.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')"style="width: 500px">OK</button>
+  </div>
+</ng-template>
+<ng-template #bwapp_cntct let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="bwapp-rat">RATE THIS MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <p> Please Give rating to This Machine regarding your Personal Experience </p>
+    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+    <hr>
+    <pre>Rate: <b>{{currentRate}}</b></pre>
+  </div>
+
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">SUBMIT</button>
+  </div>
+</ng-template>
+<!--**********************************************************************************************-->
+
+<!-- JUICS SHOP -->
+<!--**********************************************************************************************-->
+
+<ng-template #juc_shop let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="juice_shop">JUICE SHOP VULNERABLE APP</h4>
+
+  </div>
+  <div class="modal-body">
+    <p align="justify">The application contains a vast number of hacking challenges of varying difficulty where the
+      user is supposed to exploit the
+      underlying vulnerabilities. The hacking progress is tracked on a score board. Finding this
+      score board is actually one of the (easy) challenges!
+
+      Apart from the hacker and awareness training use case, pentesting proxies or security scanners
+      can use Juice Shop as a “guinea pig”-application to check how well their tools cope with JavaScript-heavy
+      application frontends and REST APIs.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')" style="width: 500px">OK</button>
+  </div>
+</ng-template>
+<ng-template #juice_cntct let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="juice-rat">RATE THIS MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <p> Please Give rating to This Machine regarding your Personal Experience </p>
+    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+    <hr>
+    <pre>Rate: <b>{{currentRate}}</b></pre>
+  </div>
+
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">SUBMIT</button>
+  </div>
+</ng-template>
+<!--- Last = owasp --->
+<!--**********************************************************************************************-->
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="0-modell">OWASP BRICKS WEB APP VULNERABLE MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">  
+    <p align="justify">Bricks is a web application security learning platform built on PHP and MySQL.
+      The project focuses on variations of commonly seen application security issues. Each 'Brick' has
+      some sort of security issue which can be leveraged manually or using automated software tools.
+      The mission is to 'Break the Bricks' and thus learn the various aspects of web application security.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')"style="width: 500px">Save</button>
+  </div>
+</ng-template>
+<ng-template #last_cntct let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="last-rat">RATE THIS MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <p> Please Give rating to This Machine regarding your Personal Experience </p>
+    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+    <hr>
+    <pre>Rate: <b>{{currentRate}}</b></pre>
+  </div>
+
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">SUBMIT</button>
+  </div>
+</ng-template>
+<!--**********************************************************************************************-->
+
+<!---gruyere-->
+<ng-template #gru_mdl let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="gru_mdl">GRUYERE WEB APP VULNERABLE MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p align="justify">This codelab is built around Gruyere /ɡruːˈjɛər/ - a small, cheesy
+      web application that allows its users to publish snippets of text and
+      store assorted files. "Unfortunately," Gruyere has multiple security
+      bugs ranging from cross-site scripting and cross-site request forgery,
+      to information disclosure, denial of service, and remote code execution.
+      The goal of this codelab is to g
+      uide you through discovering some of these bugs and learning ways to fix
+      them both in Gruyere and in general.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('OK')"style="width: 500px">OK</button>
+  </div>
+</ng-template>
+<ng-template #grue_cntct let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="grue-rat">RATE THIS MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <p> Please Give rating to This Machine regarding your Personal Experience </p>
+    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+    <hr>
+    <pre>Rate: <b>{{currentRate}}</b></pre>
+  </div>
+
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">SUBMIT</button>
+  </div>
+</ng-template>
+<!--**********************************************************************************************-->
+
+<!-- BADSTOR MODAL ---->
+<ng-template #badstore_mdl let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="badstore-mdl">Hi there!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Hello, World!</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')"style="width: 500px">OK</button>
+  </div>
+</ng-template>
+<ng-template #badstore_cntct let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="bad-rat">RATE THIS MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <p> Please Give rating to This Machine regarding your Personal Experience </p>
+    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+    <hr>
+    <pre>Rate: <b>{{currentRate}}</b></pre>
+  </div>
+
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">SUBMIT</button>
+  </div>
+</ng-template>
+<!--**********************************************************************************************-->
+
+<!----HACAZONE --->
+<ng-template #hk_mdl let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="hkl-mdl">Hi there!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Hello, World!</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')"style="width: 500px">OK</button>
+  </div>
+</ng-template>
+<ng-template #hackazone_cntct let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="hack-rat">RATE THIS MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <p> Please Give rating to This Machine regarding your Personal Experience </p>
+    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+    <hr>
+    <pre>Rate: <b>{{currentRate}}</b></pre>
+  </div>
+
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">SUBMIT</button>
+  </div>
+</ng-template>
+<!--**********************************************************************************************-->
+
+<!--- XVWA MODAL ------>
+
+<ng-template #xvwa_mdl let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="xvwa-mdl">XVWA WEBA APP VULNERABLE MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p align="justify">XVWA is a badly coded web application written in PHP/MySQL that helps
+      security enthusiasts to learn application security. It’s not advisable to
+      host this application online as it is designed to be “Xtremely Vulnerable”.
+      We recommend hosting this application in local/controlled environment and
+      sharpening your application security ninja skills with any tools of your own choice.
+      It’s totally legal to break or hack into this. The idea is to evangelize web application
+      security to the community in possibly the easiest and fundamental way.
+      Learn and acquire these skills for good purpose. How you use these skills and knowledge base
+      is not our responsibility.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')"style="width: 500px">OK</button>
+  </div>
+</ng-template>
+<ng-template #xvwa_cntct let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="xvwa-rat">RATE THIS MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <p> Please Give rating to This Machine regarding your Personal Experience </p>
+    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+    <hr>
+    <pre>Rate: <b>{{currentRate}}</b></pre>
+  </div>
+
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">SUBMIT</button>
+  </div>
+</ng-template>
+
+
+<!--******************************WACKO MODAL********************************************-->
+
+<ng-template #wacko_mdl let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="wack-mdl">Hi there!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Hello, World!</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')"style="width: 500px">Save</button>
+  </div>
+</ng-template>
+<ng-template #wacko_cntct let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="wack-rat">RATE THIS MACHINE</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+<p> Please Give rating to This Machine regarding your Personal Experience </p>
+    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+    <hr>
+    <pre>Rate: <b>{{currentRate}}</b></pre>
+  </div>
+
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">SUBMIT</button>
+  </div>
+</ng-template>
+
+<!--**********************************************************************************************-->
+

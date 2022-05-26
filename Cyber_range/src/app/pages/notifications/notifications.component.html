@@ -1,0 +1,96 @@
+
+<div class=" content">
+  <div class=" row">
+    <div class=" col-12">
+
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <div class=" row">
+            <div class=" col-sm-6 text-left">
+              <h2 class=" card-title">CTF </h2>
+              <h5 class=" card-category">CAPTURE THE FLAG </h5>
+
+            </div>
+
+          </div>
+        </div>
+        <div class=" card-header" align="justify">
+          CTF (Capture The Flag) is a kind of information security competition
+          that challenges contestants to solve a variety of tasks ranging from
+          a scavenger hunt on wikipedia to basic programming exercises, to hacking
+          your way into a server to steal data. In these challenges, the contestant
+          is usually asked to find a specific piece of text that may be hidden on the
+          server or behind a webpage.
+          &nbsp;
+          </div>
+        &nbsp;
+      </div>
+    </div>
+  </div>
+  <!-- ************************************************8-->
+  <div class=" row">
+    <div class=" col-12">
+
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <div class=" row">
+            <div class=" col-sm-6 text-left">
+              <h2 class=" card-title">CTF CHALLENGES CATEGIORIES </h2>
+
+            </div>
+
+          </div>
+        </div>
+        <div class=" card-header text-left ">
+
+            <!---CRYPTOGRAPHY CHALLENGES ACCORDIAN STARST -->
+          
+          <p-accordion>
+            <p-accordion [multiple]="true">
+              <p-accordionTab *ngFor="let f of variable" header="{{f.CategoryTitle}}">
+                {{f.CategoryDescription}}
+                <p-accordionTab header="CHALLENGE 1">
+                  {{f.Challenge1Description}}
+                  <table>
+                    <tbody>
+                    <tr>
+                      <i class="tim-icons icon-laptop" (click)="open(mut_mdl)"style="cursor: pointer; color: #1d8cf8" rel="tooltip" title="View Machine Details"></i>&nbsp;&nbsp;
+
+                      <i class="fa fa-edit" (click)="open(mutil_cntct)" style="cursor: pointer; color: #00f2c3" rel="tooltip" title="Write Review"></i>&nbsp;&nbsp;
+
+                      <button type="button" class="btn btn-danger btn-sm" id="btn1" (click)="changeBtn('btn1')">STOP</button>
+<tr> RATE
+                                <ngb-rating [(rate)]="currentRate">
+                                 <ng-template let-fill="fill" let-index="index">
+
+                                    <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+                                  </ng-template>
+                                </ngb-rating>
+
+                                <pre>Rate: <b>{{currentRate}}</b></pre>
+
+                    </tbody>
+                  </table>
+                </p-accordionTab>
+                <p-accordionTab header=" CHALLENGE 2">
+                  {{f.Challenge2Description}}
+                </p-accordionTab>
+              </p-accordionTab>
+            </p-accordion>
+          </p-accordion>
+
+
+
+          <!---PWN ACCORDIAN ENDS -->
+
+          &nbsp;
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- ************************************************8-->
+
+
+</div>
+<!-- ************************************************8-->
