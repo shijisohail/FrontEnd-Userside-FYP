@@ -94,7 +94,7 @@ body {
   line-height: 1.5;
   color: #525f7f;
   text-align: left;
-  background-color: #1e1e2f;
+  background-color: #ffffff;
 }
 
 [tabindex="-1"]:focus {
@@ -12196,7 +12196,7 @@ fieldset[disabled] .btn-link.active {
 
 .footer .nav {
   display: inline-block;
-  float: left;
+  /* float: left; */
   margin-bottom: 0;
   padding-left: 30px;
   list-style: none;
